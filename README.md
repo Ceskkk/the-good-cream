@@ -10,3 +10,4 @@ La prueba técnica requiere usar las tecnologías con las que uno se sienta mas 
 - React: Librería de JavaScript para un desarrollo orientado a componentes.
 - TypeScript: Superset de JavaScript que permite un tipado estático.
 - Eslint + StandardJS (ts-standard): Linter y formateador de código para un desarrollo mas limpio.
+- TailwindCSS: Framework de CSS para un desarrollo más ágil.
