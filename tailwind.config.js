@@ -10,8 +10,16 @@ export default {
     extend: {
       fontFamily: {
         'neue-montreal': ['NeueMontreal', ...defaultTheme.fontFamily.sans]
+      },
+      colors: {
+        'tgc-green': '#A5B98E'
+      },
+      screens: {
+        lg: { max: '1100px' }
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwind-scrollbar')
+  ]
 }
