@@ -9,7 +9,7 @@ function SettingsMenuDesktop (): JSX.Element {
   const cartClick = (): void => {}
 
   return (
-    <div className='flex flex-row items-center gap-9 relative'>
+    <div className='flex flex-1 justify-end flex-row items-center gap-9 relative'>
       <LangSelector />
       <SearchIcon onClick={searchClick} />
       <UserIcon onClick={userClick} />

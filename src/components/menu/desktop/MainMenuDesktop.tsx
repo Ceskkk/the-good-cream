@@ -3,7 +3,7 @@ import productMenuList from '../../../mocks/productMenuList'
 
 function MainMenuDesktop (): JSX.Element {
   return (
-    <div className='flex gap-9 items-center'>
+    <div className='flex flex-1 gap-9 items-center'>
       <HamburgerMenuDesktop />
       <nav>
         <ul className='flex gap-8'>

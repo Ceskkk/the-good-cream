@@ -11,7 +11,7 @@ function Header (): JSX.Element {
   return (
     <header className={`flex justify-between items-center py-6 border-b-2 border-black gap-9 ${isMobile ? 'px-6' : 'px-14'}`}>
       {isMobile ? <MainMenuMobile /> : <MainMenuDesktop />}
-      <h1 className={`flex text-center items-center uppercase ${isMobile ? 'text-2xl' : 'text-3xl'}`} style={{ fontFamily: 'Special Elite' }}>
+      <h1 className={`flex flex-1 justify-center text-center uppercase ${isMobile ? 'text-2xl' : 'text-3xl'}`} style={{ fontFamily: 'Special Elite' }}>
         <a href='#' className='relative top-1'>The good cream</a>
       </h1>
       {isMobile ? <CartIcon onClick={cartClick} cartItems={0} /> : <SettingsMenuDesktop />}
