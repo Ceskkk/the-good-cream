@@ -15,14 +15,14 @@ function HamburgerMenuMobile (): JSX.Element {
   return (
     <>
       <HamburgerIcon onClick={() => toggleMenu(!isMenuOpen)} />
-      <nav className={`${isMenuOpen ? '' : 'left-[-100%]'} fixed z-20 left-0 top-0 w-full h-full bg-white flex flex-col overflow-y-auto transition-all duration-700`}>
+      <section className={`${isMenuOpen ? '' : 'left-[-100%]'} fixed z-20 left-0 top-0 w-full h-full bg-white flex flex-col overflow-y-auto transition-all duration-700`}>
         <div className={`${divStyles} !flex-row`}>
           <CrossIcon onClick={() => toggleMenu(!isMenuOpen)} />
           <h1 className='flex w-full justify-center ml-[-22px] uppercase text-2xl' style={{ fontFamily: 'Special Elite' }}>
             <a href='#'>The good cream</a>
           </h1>
         </div>
-        <div className={divStyles}>
+        <nav className={divStyles}>
           <h2 className={titleStyles}>Productos</h2>
           <ul>
             {productMenuList.map((product) => (
@@ -33,8 +33,8 @@ function HamburgerMenuMobile (): JSX.Element {
               </li>
             ))}
           </ul>
-        </div>
-        <div className={`${divStyles} !border-b-0`}>
+        </nav>
+        <nav className={`${divStyles} !border-b-0`}>
           <h2 className={titleStyles}>Más información</h2>
           <ul>
             {moreInfoMenuList.map((item) => (
@@ -45,9 +45,9 @@ function HamburgerMenuMobile (): JSX.Element {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
         <SettingsMenuMobile />
-      </nav>
+      </section>
     </>
   )
 }
