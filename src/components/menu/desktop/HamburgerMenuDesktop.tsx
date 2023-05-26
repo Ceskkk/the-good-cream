@@ -1,65 +1,10 @@
 import { useState } from 'react'
 import HamburgerIcon from '../../../assets/icons/HamburgerIcon'
-import { MenuItem } from '../../../types'
 import CrossIcon from '../../../assets/icons/CrossIcon'
 import InstagramIcon from '../../../assets/icons/InstagramIcon'
 import FacebookIcon from '../../../assets/icons/FacebookIcon'
-
-const products: MenuItem[] = [
-  {
-    id: 0,
-    name: 'Todos',
-    link: '#'
-  },
-  {
-    id: 1,
-    name: 'Facial',
-    link: '#'
-  },
-  {
-    id: 2,
-    name: 'Corporal',
-    link: '#'
-  },
-  {
-    id: 3,
-    name: 'Bienestar',
-    link: '#'
-  },
-  {
-    id: 4,
-    name: 'Cofres',
-    link: '#'
-  }
-]
-
-const moreInfo: MenuItem[] = [
-  {
-    id: 0,
-    name: 'Qué es el CBD',
-    link: '#'
-  },
-  {
-    id: 1,
-    name: 'Nosotras',
-    link: '#'
-  },
-  {
-    id: 2,
-    name: 'Blog',
-    link: '#'
-  },
-  {
-    id: 3,
-    name: 'FAQs',
-    link: '#'
-  },
-  {
-    id: 4,
-    name: 'Contacto',
-    link: '#'
-  }
-]
+import productMenuList from '../../../mocks/productMenuList'
+import moreInfoMenuList from '../../../mocks/moreInfoMenuList'
 
 function HamburgerMenuDesktop (): JSX.Element {
   const [isMenuOpen, toggleMenu] = useState<boolean>(false)
@@ -74,7 +19,7 @@ function HamburgerMenuDesktop (): JSX.Element {
         <CrossIcon onClick={() => toggleMenu(!isMenuOpen)} />
         <h2 className={titleStyles}>Productos</h2>
         <ul>
-          {products.map((product) => (
+          {productMenuList.map((product) => (
             <li key={product.id}>
               <a href={product.link} className={linkStyles}>
                 {product.name}
@@ -84,7 +29,7 @@ function HamburgerMenuDesktop (): JSX.Element {
         </ul>
         <h2 className={titleStyles}>Más información</h2>
         <ul>
-          {moreInfo.map((item) => (
+          {moreInfoMenuList.map((item) => (
             <li key={item.id}>
               <a href={item.link} className={linkStyles}>
                 {item.name}
