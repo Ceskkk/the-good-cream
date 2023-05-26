@@ -1,6 +1,6 @@
-import { MenuItem } from '../types'
+import { IMenuItem } from '../types'
 
-const moreInfoFooterList: MenuItem[] = [
+const moreInfoFooterList: IMenuItem[] = [
   {
     id: 0,
     name: 'Contactar',

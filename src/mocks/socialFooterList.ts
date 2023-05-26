@@ -1,6 +1,6 @@
-import { MenuItem } from '../types'
+import { IMenuItem } from '../types'
 
-const socialFooterList: MenuItem[] = [
+const socialFooterList: IMenuItem[] = [
   {
     id: 0,
     name: 'Facebook',

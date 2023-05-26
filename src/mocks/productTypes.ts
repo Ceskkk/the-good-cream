@@ -1,6 +1,6 @@
-import { ProductType } from '../types'
+import { IProductType } from '../types'
 
-const productTypes: ProductType[] = [
+const productTypes: IProductType[] = [
   {
     id: 0,
     title: 'Limpiadores y tónicos',

@@ -1,6 +1,6 @@
-import { MenuItem } from '../types'
+import { IMenuItem } from '../types'
 
-const productMenuList: MenuItem[] = [
+const productMenuList: IMenuItem[] = [
   {
     id: 0,
     name: 'Todos',

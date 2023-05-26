@@ -1,6 +1,6 @@
-import { MenuItem } from '../types'
+import { IMenuItem } from '../types'
 
-const moreInfoMenuList: MenuItem[] = [
+const moreInfoMenuList: IMenuItem[] = [
   {
     id: 0,
     name: 'Qué es el CBD',
