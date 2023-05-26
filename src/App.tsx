@@ -1,15 +1,9 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import ProductTypesSection from './components/ProductTypesSection'
-import NewsletterBanner from './components/menu/NewsletterBanner'
+import Homepage from './pages/Homepage'
 
 function App (): JSX.Element {
   return (
     <>
-      <Header />
-      <ProductTypesSection />
-      <NewsletterBanner />
-      <Footer />
+      <Homepage />
     </>
   )
 }
