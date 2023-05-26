@@ -1,8 +1,8 @@
-import { MenuItem } from '../../types'
+import { IMenuItem } from '../../types'
 
 interface LinkMenuProps {
   title: string
-  links: MenuItem[]
+  links: IMenuItem[]
 }
 
 function LinkMenu ({ title, links }: LinkMenuProps): JSX.Element {
