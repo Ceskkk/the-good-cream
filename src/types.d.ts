@@ -10,3 +10,12 @@ export interface IProductType {
   alt: string
   img: string
 }
+
+export interface IProduct {
+  id: number
+  name: string
+  description: string
+  price: number
+  category: string
+  img: string
+}

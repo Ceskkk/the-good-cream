@@ -1,6 +1,6 @@
 import { FormEvent } from 'react'
-import ArrowRightIcon from '../../assets/icons/ArrowRightIcon'
-import useMediaQuery from '../../hooks/useMediaQuery'
+import ArrowRightIcon from '../assets/icons/ArrowRightIcon'
+import useMediaQuery from '../hooks/useMediaQuery'
 
 export default function NewsletterBanner (): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
@@ -17,8 +17,8 @@ export default function NewsletterBanner (): JSX.Element {
           type='email' placeholder='Dirección de correo'
           className={`${isMobile ? 'w-full max-w-[400px]' : 'min-w-[300px]'} text-2xl py-2 border-b-2 border-black outline-none placeholder:text-black placeholder:text-2xl bg-[#F7F6F2]`}
         />
-        <button className='absolute right-0 top-4'>
-          <ArrowRightIcon />
+        <button className='absolute right-0 top-4 w-[25px] h-[20px]'>
+          <ArrowRightIcon color='black' hoverColor='tgc-green' />
         </button>
       </form>
     </section>
