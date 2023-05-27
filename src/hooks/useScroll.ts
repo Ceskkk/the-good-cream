@@ -5,8 +5,8 @@ interface UseScrollProps {
 }
 
 interface UseScrollReturn {
-  scrollNumber: number
-  scrollLimit: number
+  isFirstSlide: boolean
+  isLastSlide: boolean
   scrollLeft: () => void
   scrollRight: () => void
 }
@@ -14,6 +14,8 @@ interface UseScrollReturn {
 const useScroll = ({ scrollElementRef }: UseScrollProps): UseScrollReturn => {
   const [scrollNumber, setScrollNumber] = useState<number>(1)
   const [scrollLimit, setScrollLimit] = useState<number>(0)
+  const [isFirstSlide, toggleIsFirstSlide] = useState<boolean>(true)
+  const [isLastSlide, toggleIsLastSlide] = useState<boolean>(false)
   const [scrollElementChildWidth, setScrollElementChildWidth] = useState<number>(0)
 
   const scrollLeft = (): void => {
@@ -31,7 +33,12 @@ const useScroll = ({ scrollElementRef }: UseScrollProps): UseScrollReturn => {
     setScrollElementChildWidth(scrollElementRef.current.children[0].offsetWidth)
   }, [])
 
-  return { scrollNumber, scrollLimit, scrollLeft, scrollRight }
+  useEffect(() => {
+    toggleIsFirstSlide(scrollNumber === 1)
+    toggleIsLastSlide(scrollNumber === scrollLimit)
+  }, [scrollNumber])
+
+  return { isFirstSlide, isLastSlide, scrollLeft, scrollRight }
 }
 
 export default useScroll
