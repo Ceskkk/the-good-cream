@@ -18,7 +18,7 @@ export default function NewsletterBanner (): JSX.Element {
           className={`${isMobile ? 'w-full max-w-[400px]' : 'min-w-[300px]'} text-2xl py-2 border-b-2 border-black outline-none placeholder:text-black placeholder:text-2xl bg-[#F7F6F2]`}
         />
         <button className='absolute right-0 top-4 w-[25px] h-[20px]'>
-          <ArrowRightIcon color='black' hoverColor='tgc-green' />
+          <ArrowRightIcon color='black' />
         </button>
       </form>
     </section>

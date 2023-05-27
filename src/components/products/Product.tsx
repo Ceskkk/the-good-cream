@@ -10,7 +10,7 @@ function Product ({ product }: ProductProps): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
 
   return (
-    <article className={`flex flex-col flex-1 justify-end items-center text-center pt-20 pb-24 px-10 border-r-2 border-black last:border-r-0 ${isMobile ? 'flex-[0_0_auto] w-full' : ''}`}>
+    <article className={`flex flex-[0_0_auto] flex-col justify-end items-center text-center pt-20 pb-24 px-10 border-r-2 border-black last:border-r-0 ${isMobile ? 'w-full' : 'w-[33.37%]'}`}>
       <figure className='mb-2'>
         <img src={`/products/${product.img}`} alt={`Imagen de ${product.name}`} />
       </figure>

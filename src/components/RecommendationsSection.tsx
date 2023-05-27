@@ -1,17 +1,23 @@
 import TitleSection from './shared/TitleSection'
 import recommendedProducts from '../mocks/recommendedProducts'
-import Product from './products/Product'
 import useMediaQuery from '../hooks/useMediaQuery'
 import { useRef } from 'react'
 import ArrowRightIcon from '../assets/icons/ArrowRightIcon'
 import ArrowLeftIcon from '../assets/icons/ArrowLeftIcon'
 import useScroll from '../hooks/useScroll'
+import ProductList from './products/ProductList'
 
 function RecommendationsSection (): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
   const scrollElementRef = useRef<any>(null)
 
-  const { isFirstSlide, isLastSlide, scrollLeft, scrollRight } = useScroll({ scrollElementRef })
+  const useScrollParams = {
+    productsInScreen: 1,
+    totalProducts: 3,
+    scrollElementRef
+  }
+
+  const { isFirstSlide, isLastSlide, scrollLeft, scrollRight } = useScroll(useScrollParams)
 
   return (
     <section className='flex flex-wrap relative'>
@@ -25,8 +31,8 @@ function RecommendationsSection (): JSX.Element {
           </div>
           )
         : null}
-      <div ref={scrollElementRef} className={`overflow-x-hidden flex flex-wrap w-full scroll-smooth ${isMobile ? 'flex-nowrap overflow-auto' : ''}`}>
-        {recommendedProducts.map((product) => <Product key={product.id} product={product} />)}
+      <div ref={scrollElementRef} className='overflow-x-hidden flex w-full scroll-smooth flex-nowrap overflow-auto '>
+        <ProductList products={recommendedProducts} />
       </div>
       {isMobile
         ? (

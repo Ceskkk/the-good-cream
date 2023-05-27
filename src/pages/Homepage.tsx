@@ -4,11 +4,13 @@ import ProductTypesSection from '../components/ProductTypesSection'
 import RecommendationsSection from '../components/RecommendationsSection'
 import NewsletterBanner from '../components/NewsletterBanner'
 import CbdSection from '../components/CbdSection'
+import NewsSection from '../components/NewsSection'
 
 function Homepage (): JSX.Element {
   return (
     <main>
       <Header />
+      <NewsSection />
       <CbdSection />
       <ProductTypesSection />
       <RecommendationsSection />

@@ -1,6 +1,8 @@
 import { MutableRefObject, useEffect, useState } from 'react'
 
 interface UseScrollProps {
+  productsInScreen: number
+  totalProducts: number
   scrollElementRef: MutableRefObject<any>
 }
 
@@ -11,32 +13,39 @@ interface UseScrollReturn {
   scrollRight: () => void
 }
 
-const useScroll = ({ scrollElementRef }: UseScrollProps): UseScrollReturn => {
-  const [scrollNumber, setScrollNumber] = useState<number>(1)
-  const [scrollLimit, setScrollLimit] = useState<number>(0)
+const useScroll = ({ productsInScreen, totalProducts, scrollElementRef }: UseScrollProps): UseScrollReturn => {
+  const [scrollNumber, setScrollNumber] = useState<number>(productsInScreen)
   const [isFirstSlide, toggleIsFirstSlide] = useState<boolean>(true)
   const [isLastSlide, toggleIsLastSlide] = useState<boolean>(false)
   const [scrollElementChildWidth, setScrollElementChildWidth] = useState<number>(0)
+  const [isAnimating, setIsAnimating] = useState<boolean>(false)
 
   const scrollLeft = (): void => {
-    scrollElementRef.current.scrollLeft = parseInt(scrollElementRef.current.scrollLeft) - scrollElementChildWidth
-    if (scrollNumber > 1) setScrollNumber(scrollNumber - 1)
+    if (!isAnimating) {
+      setIsAnimating(true)
+      scrollElementRef.current.scrollLeft = parseInt(scrollElementRef.current.scrollLeft) - scrollElementChildWidth
+      if (scrollNumber > productsInScreen) setScrollNumber(scrollNumber - 1)
+      setTimeout(() => setIsAnimating(false), 500)
+    }
   }
 
   const scrollRight = (): void => {
-    scrollElementRef.current.scrollLeft = parseInt(scrollElementRef.current.scrollLeft) + scrollElementChildWidth
-    if (scrollNumber < scrollLimit) setScrollNumber(scrollNumber + 1)
+    if (!isAnimating) {
+      setIsAnimating(true)
+      scrollElementRef.current.scrollLeft = parseInt(scrollElementRef.current.scrollLeft) + scrollElementChildWidth
+      if (scrollNumber < totalProducts) setScrollNumber(scrollNumber + 1)
+      setTimeout(() => setIsAnimating(false), 500)
+    }
   }
 
   useEffect(() => {
-    setScrollLimit(scrollElementRef.current.children.length)
-    setScrollElementChildWidth(scrollElementRef.current.children[0].offsetWidth)
-  }, [])
+    toggleIsFirstSlide(scrollNumber === productsInScreen)
+    toggleIsLastSlide(scrollNumber === totalProducts)
+  }, [scrollNumber])
 
   useEffect(() => {
-    toggleIsFirstSlide(scrollNumber === 1)
-    toggleIsLastSlide(scrollNumber === scrollLimit)
-  }, [scrollNumber])
+    setScrollElementChildWidth(scrollElementRef.current.children[0].offsetWidth)
+  }, [scrollElementRef.current])
 
   return { isFirstSlide, isLastSlide, scrollLeft, scrollRight }
 }
