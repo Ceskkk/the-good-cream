@@ -8,15 +8,17 @@ import NewsSection from '../components/NewsSection'
 
 function Homepage (): JSX.Element {
   return (
-    <main>
+    <>
       <Header />
-      <NewsSection />
-      <CbdSection />
-      <ProductTypesSection />
-      <RecommendationsSection />
-      <NewsletterBanner />
-      <Footer />
-    </main>
+      <main>
+        <NewsSection />
+        <CbdSection />
+        <ProductTypesSection />
+        <RecommendationsSection />
+        <NewsletterBanner />
+        <Footer />
+      </main>
+    </>
   )
 }
 
