@@ -27,7 +27,7 @@ function RecommendationsSection (): JSX.Element {
       {isMobile
         ? (
           <div className={`${isFirstSlide ? 'bg-gray-400 pointer-events-none' : 'bg-tgc-green'} absolute bottom-1/2 -translate-y-1/2 left-8  text-white p-5 rounded-full`} onClick={scrollLeft}>
-            <ArrowLeftIcon color='white' hoverColor='black' />
+            <ArrowLeftIcon color='white' />
           </div>
           )
         : null}
@@ -37,7 +37,7 @@ function RecommendationsSection (): JSX.Element {
       {isMobile
         ? (
           <div className={`${isLastSlide ? 'bg-gray-400 pointer-events-none' : 'bg-tgc-green'} absolute bottom-1/2 -translate-y-1/2 right-8 text-white p-5 rounded-full`} onClick={scrollRight}>
-            <ArrowRightIcon color='white' hoverColor='black' />
+            <ArrowRightIcon color='white' />
           </div>
 
           )
