@@ -1,5 +1,6 @@
 import useMediaQuery from '../../hooks/useMediaQuery'
 import { IProduct } from '../../types'
+import Button from '../shared/Button'
 
 interface ProductProps {
   product: IProduct
@@ -17,7 +18,7 @@ function Product ({ product }: ProductProps): JSX.Element {
       <h2 className='text-3xl mb-2 max-w-[280px]'>{product.name}</h2>
       <p className='text-base mb-2 font-medium max-w-[280px]'>{product.description}</p>
       <span className='text-lg mb-2 font-medium'>{product.price} €</span>
-      <button className='text-white text-lg bg-tgc-green px-12 py-2 rounded-full hover:shadow-lg hover:font-medium'>Comprar</button>
+      <Button text='Comprar' />
     </article>
   )
 }

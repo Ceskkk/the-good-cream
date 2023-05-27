@@ -5,7 +5,9 @@ import TitleSection from './shared/TitleSection'
 function ProductTypesSection (): JSX.Element {
   return (
     <section className='flex flex-wrap border-b-2 border-black'>
-      <TitleSection title='Tipos de producto' />
+      <TitleSection>
+        Tipos de producto
+      </TitleSection>
       <ProductTypesList products={productTypes} />
     </section>
   )

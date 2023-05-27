@@ -15,7 +15,9 @@ function RecommendationsSection (): JSX.Element {
 
   return (
     <section className='flex flex-wrap relative'>
-      <TitleSection title='Te recomendamos' />
+      <TitleSection>
+        Te recomendamos
+      </TitleSection>
       {isMobile
         ? (
           <div className={`${scrollNumber === 1 ? 'bg-gray-400 pointer-events-none' : ''} absolute bottom-1/2 -translate-y-1/2 left-8 bg-tgc-green text-white p-5 rounded-full`} onClick={scrollLeft}>
