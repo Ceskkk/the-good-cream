@@ -45,8 +45,8 @@ function HeroList (): JSX.Element {
     <ul>
       {heroListItems.map((item) => (
         <li key={item.id} className={`flex p-4 border-t-2 border-black ${isMobile ? 'flex-col' : 'flex-row items-center'}`}>
-          <h3 className={`flex gap-2 items-center text-xl font-medium w-[200px] ${isMobile ? '' : 'pl-12'}`}>
-            {item.icon}{item.title}
+          <h3 className={`flex gap-2 items-center text-2xl font-medium w-[220px] ${isMobile ? '' : 'pl-12'}`}>
+            <span>{item.icon}</span>{item.title}
           </h3>
           <p className={`text-base font-medium' ${isMobile ? '' : 'pl-4'}`}>{item.text}</p>
         </li>

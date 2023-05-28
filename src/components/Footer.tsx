@@ -19,7 +19,7 @@ function Footer (): JSX.Element {
           ? <LinkMenu title='Más información' links={moreInfoFooterList} />
           : <LinkMenu title='Contacto' links={contactFooterList} />}
       </div>
-      <div className='flex justify-center w-full bg-black border-t-[1px] border-white px-4 py-6'>
+      <div className='flex justify-center w-full bg-black border-t-2 border-white px-4 py-6 text-sm'>
         <span className='text-white uppercase'>© 2022 The good cream</span>
       </div>
     </footer>

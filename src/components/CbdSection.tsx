@@ -10,7 +10,7 @@ export default function CbdSection (): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
 
   const articleStyle = isMobile ? 'flex items-center mb-12 px-6' : 'flex mb-24'
-  const pStyle = isMobile ? 'text-xl ml-10' : 'text-xl ml-10 w-[350px]'
+  const pStyle = isMobile ? 'text-lg ml-10' : 'text-xl ml-10 w-[350px]'
 
   return (
     <section className='flex flex-wrap border-b-2 border-black'>

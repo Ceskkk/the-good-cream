@@ -43,8 +43,8 @@ function HeroSection (): JSX.Element {
         </div>
       </div>
       <div className={`flex flex-1 flex-col bg-[#F7F6F2] ${isMobile ? 'px-4 py-8' : 'pb-16'}`}>
-        <h1 className={`text-6xl mb-8 max-w-[300px] ${isMobile ? '' : 'px-14 pt-8'}`}>Botanical Premium Cosmetics</h1>
-        <h2 className={`text-xl font-medium max-w-[500px] ${isMobile ? '' : 'mb-24 px-14'}`}>Apostamos por ofrecerte los mejores cosméticos naturales, a base de cáñamo, para un cuidado completo de tu piel.</h2>
+        <h1 className={`mb-8 max-w-[300px] ${isMobile ? 'text-5xl' : 'px-14 pt-8 text-6xl'}`}>Botanical Premium Cosmetics</h1>
+        <h2 className={`font-medium max-w-[540px] ${isMobile ? 'text-lg' : 'mb-24 px-14 text-2xl'}`}>Apostamos por ofrecerte los mejores cosméticos naturales, a base de cáñamo, para un cuidado completo de tu piel.</h2>
         {isMobile
           ? null
           : (

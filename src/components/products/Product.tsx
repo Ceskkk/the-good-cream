@@ -17,7 +17,7 @@ function Product ({ product }: ProductProps): JSX.Element {
       <label className='mb-2 rounded-full bg-[#F7F6F2] uppercase text-xs px-4 py-2'>{product.category}</label>
       <h2 className='text-3xl mb-2 max-w-[280px]'>{product.name}</h2>
       <p className='text-base mb-2 font-medium max-w-[280px]'>{product.description}</p>
-      <span className='text-lg mb-2 font-medium'>{product.price} €</span>
+      <span className='text-xl mb-2'>{product.price} €</span>
       <Button text='Comprar' />
     </article>
   )

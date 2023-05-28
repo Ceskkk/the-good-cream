@@ -12,7 +12,7 @@ function LinkMenu ({ title, links }: LinkMenuProps): JSX.Element {
       <ul className='flex flex-col gap-2'>
         {links.map((item) => (
           <li key={item.id}>
-            <a href={item.link} className='text-lg text-white hover:text-tgc-green transition'>{item.name}</a>
+            <a href={item.link} className='text-xl text-white hover:text-tgc-green transition'>{item.name}</a>
           </li>
         ))}
       </ul>
