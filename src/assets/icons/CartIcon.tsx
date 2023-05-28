@@ -26,4 +26,5 @@ function CartIcon ({ cartItems, onClick }: CartIconProps): JSX.Element {
     </div>
   )
 }
+
 export default CartIcon

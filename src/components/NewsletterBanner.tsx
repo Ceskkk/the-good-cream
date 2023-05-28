@@ -2,7 +2,7 @@ import { FormEvent } from 'react'
 import ArrowRightIcon from '../assets/icons/ArrowRightIcon'
 import useMediaQuery from '../hooks/useMediaQuery'
 
-export default function NewsletterBanner (): JSX.Element {
+function NewsletterBanner (): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
   const han = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
@@ -24,3 +24,5 @@ export default function NewsletterBanner (): JSX.Element {
     </section>
   )
 }
+
+export default NewsletterBanner

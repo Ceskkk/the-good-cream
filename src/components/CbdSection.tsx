@@ -6,7 +6,7 @@ import useMediaQuery from '../hooks/useMediaQuery'
 import Button from './shared/Button'
 import TitleSection from './shared/TitleSection'
 
-export default function CbdSection (): JSX.Element {
+function CbdSection (): JSX.Element {
   const isMobile = useMediaQuery('(max-width:1100px)')
 
   const articleStyle = isMobile ? 'flex items-center mb-12 px-6' : 'flex mb-24'
@@ -54,3 +54,5 @@ export default function CbdSection (): JSX.Element {
     </section>
   )
 }
+
+export default CbdSection
