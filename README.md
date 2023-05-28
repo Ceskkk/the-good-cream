@@ -11,3 +11,22 @@ La prueba técnica requiere usar las tecnologías con las que uno se sienta mas 
 - TypeScript: Superset de JavaScript que permite un tipado estático.
 - Eslint + StandardJS (ts-standard): Linter y formateador de código para un desarrollo mas limpio.
 - TailwindCSS: Framework de CSS para un desarrollo más ágil.
+- Pnpm: Manejador de paquetes rápido y eficiente, alternativa a npm o yarn.
+
+## Cómo iniciar el proyecto
+
+1 - Descargamos el proyecto en local
+```
+git clone https://github.com/Ceskkk/the-good-cream
+```
+
+2 - Accedemos al proyecto e instalamos las dependencias
+```
+cd the-good-cream
+pnpm i
+```
+
+3 - Iniciamos el proyecto
+```
+pnpm dev
+```
